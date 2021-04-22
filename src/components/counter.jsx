@@ -5,6 +5,7 @@ class Counter extends Component {
     count: 0,
   };
 
+  /* Method 1 */
   constructor() {
     super();
     this.increaseValue = this.increaseValue.bind(this);
@@ -13,12 +14,16 @@ class Counter extends Component {
   increaseValue() {
     this.setState({count: this.state.count + 1});
   }
+  /* end of Method 1 */
 
   /*
+   * Method 2
+   *
   increaseValue() {
     this.setState({
       count: this.state.count + 1});
   }
+  * End of method 2
   */
 
   stylingBadge() {
