@@ -23,8 +23,8 @@ class Counter extends Component {
     this.setState({
       count: this.state.count + 1});
   }
-  * End of method 2
-  */
+   * End of method 2
+   */
 
   stylingBadge() {
     let classToAdd = "badge m-2 badge-";
@@ -33,6 +33,13 @@ class Counter extends Component {
 
     return (this.state.count === 0 ? classToAdd + "danger" : classToAdd + "primary");
   }
+  /*
+   * Make sure to call this.increaseValue not the this.increaseValue()
+   * Reason being we wish to call by reference,
+   * and this is not the express js
+   * What to do if we really want to call with parameter, call to one without one, then from there direct the call to increaseValue with a parameter(similar to leetcode)
+   * THERE WILL BE NO PARAMETER IN EVENT CALLING FUNCTION
+   */
   render() {
     return (
       <div>
